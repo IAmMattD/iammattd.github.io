@@ -1,17 +1,12 @@
 # Site settings
-title: "Jekyll template"
-url: "//ihavee.github.io"
+title: "I Am MattD"
+url: "http://iammattd.github.io"
 highlighter: pygments
 paginate: 5
 author:
-    name: Havee
-    github: Ihavee
-    email:
-    gitcafe: Havee
-    twitter:
-    facebook:
-    googleplus:
-    weibo:
+    name: MattD
+    github: IAmMattD
+    email: 1289367510@qq.com
 atom_path: /atom.xml
 rss_path: /rss.xml
 
@@ -19,7 +14,7 @@ rss_path: /rss.xml
 markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
-permalink: /:categories/:year-:month/:title.html
+permalink: /:categories/:year/:month/:date/:title.html
 
 assets_path: /assets
 sass:
@@ -29,7 +24,7 @@ sass:
 # comment
 comments:
     duoshuo:
-        name:                               # short name
+        name: mattd                              # short name
         rcomments:
             num: 10
             avatar: 0

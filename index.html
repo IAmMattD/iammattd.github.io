@@ -15,29 +15,29 @@ layout: default
   <div class="pull-right">
     {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-    <a class="btn btn-primary btn-sm" href="/">Home</a>
-    <a class="btn btn-primary btn-sm" href="/">&laquo; Prev</a>
+    <a class="btn btn-primary btn-sm" href="/">首页</a>
+    <a class="btn btn-primary btn-sm" href="/">&laquo; 上一页</a>
     {% else %}
-    <a class="btn btn-primary btn-sm" href="/">Home</a>
-    <a class="btn btn-primary btn-sm" href="/page{{paginator.previous_page}}/">&laquo; Prev</a>
+    <a class="btn btn-primary btn-sm" href="/">首页</a>
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.previous_page}}/">&laquo; 上一页</a>
     {% endif %}
     {% else %}
-    <span><a class="btn btn-primary btn-sm disabled" href="/">Home</a></span>
-    <span><a class="btn btn-primary btn-sm disabled">&laquo; Prev</a></span>
+    <span><a class="btn btn-primary btn-sm disabled" href="/">首页</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">&laquo; 上一页</a></span>
     {% endif %}
-    <span><a class="btn btn-primary btn-sm disabled">Page: {{paginator.page}} of {{paginator.total_pages}}</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">第 {{paginator.page}} 页，共 {{paginator.total_pages}} 页</a></span>
     {% if paginator.next_page %}
-    <a class="btn btn-primary btn-sm" href="/page{{paginator.next_page}}/">Next &raquo;</a>
-    <a class="btn btn-primary btn-sm" href="/page{{paginator.total_pages}}/">Last</a>
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.next_page}}/">下一页 &raquo;</a>
+    <a class="btn btn-primary btn-sm" href="/page{{paginator.total_pages}}/">末页</a>
     {% else if paginator.page == paginator.total_pages %}
-    <span><a class="btn btn-primary btn-sm disabled">Next &raquo;</a></span>
-    <span><a class="btn btn-primary btn-sm disabled">Last</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">下一页 &raquo;</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">末页</a></span>
     {% endif %}
   </div>
 </div>
 <aside class="col-md-3 visible-lg visible-md">
   {% include categories.html %}
-  {% include recently_posts.html %}
-  {% include recently_comments.html %}
+  {% include recent_posts.html %}
+  {% include recent_comments.html %}
   {% include blogroll.html %}
 </aside>

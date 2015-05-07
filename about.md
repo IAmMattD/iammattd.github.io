@@ -1,19 +1,16 @@
 ---
 layout: page
-title: "About"
-description: "业余爱好的点滴记录，同时作为配置备份的存储地，好记性不如滥笔头。"
+title: "关于我"
+description: "我的 Unix/Linux 经验"
 ---
 
-#### ChangeLog
+#### 里程碑
 
-- 2014年8月:    放弃 JB，转为 Jekyll，重新制作了模板
-- 2014年8月:    为了速度，砍掉华而不实的功能
-- 2014年3月:    托管方由 GitHub 转向 GitCafe
-- 2014年2月:    放弃支持低于 IE 9 的版本
-- 2013年9月:    域名切换到 Havee.me
-- 2013年7月:    由 Octopress + github 转为 Jekyll Bootstrap + github
-- 2013年1月:    由 Wordpress 转为 Octopress + github
-- 2011年12月:   域名切换为 Ihavanna.Org，并将发布其他平台的一些文章转回本博客
-- 2009年3月:    建立博客，准备记录
+- 2015 年 5 月:    在 GitHub 搭建独立博客，谢谢 [Havana](http://havee.me) 的模板
+- 2014 年 6 月:    彻底删除 Windows 和 BSD，仅使用 Linux
+- 2012 年 9 月:    接触 Linux，从 Slackware 入门，保留 FreeBSD
+- 2011 年 6 月:    陆续尝试使用 FreeBSD、NetBSD 和 DragonFly BSD 等 BSD 分支
+- 2010 年 8 月:    放弃 Solaris，转投 OpenBSD
+- 2009 年 7 月:    开始使用 Solaris
 
 {% include comments.html %}
