@@ -14,7 +14,7 @@ rss_path: /rss.xml
 markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
-permalink: /:categories/:year/:month/:date/:title.html
+permalink: /:categories/:year/:month/:title.html
 
 assets_path: /assets
 sass:
