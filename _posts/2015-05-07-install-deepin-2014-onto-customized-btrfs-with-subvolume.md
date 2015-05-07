@@ -135,8 +135,8 @@ UUID=5713767f-e3f3-4871-8db9-9f5a2c3c37df  /var   btrfs defaults,subvolid=262,co
 接着修改默认 locale，如果不设置，系统就会把 locale 自动 fallback 为 POSIX。创建 `/etc/default/locale` 文件，写入以下内容：
 
 {% highlight bash %}
-LANG="zh\_CN.UTF-8"
-LANGUAGE="zh\_CN.UTF-8"
+LANG="zh_CN.UTF-8"
+LANGUAGE="zh_CN.UTF-8"
 {% endhighlight %}
 
 还要修改 `/etc/default/useradd`，以指定新用户的默认 shell，把 `SHELL=/bin/sh` 这一行改为 `SHELL=/bin/zsh`。
