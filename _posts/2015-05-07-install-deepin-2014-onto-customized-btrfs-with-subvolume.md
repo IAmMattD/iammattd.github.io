@@ -61,7 +61,7 @@ tags: [btrfs, Deepin, subvolume]
 
 第一种方案挂载比较方便，只需要挂载最上面一级的 subvolume，位于它下方的二级 subvolume 就能自动挂载了，不需要再手动挂载每个 subvolume。在生成快照的时候，也可以递归进行 snapshot 操作。但是，这种方案无法为每个二级 subvolume 单独设定挂载选项，设定了也没用，因为二级 subvolume 的挂载选项只能从上级 subvolume 继承而来。
 
-第二种方案就要灵活得多，每个 subvolume 可以单独设置挂载选项，但是如果要维护的时候挂载过程比较繁琐，尤其是分了较多的 subvolume 的话。另外，这种方案无法实现递归快照，即使你把每个 subvolume 按照属性结构相应挂载了。
+第二种方案就要灵活得多，每个 subvolume 可以单独设置挂载选项，但是如果要维护的时候挂载过程比较繁琐，尤其是分了较多的 subvolume 的话。另外，这种方案无法实现递归快照，即使你把每个 subvolume 按照树形结构相应挂载了。
 
 将创建好的 subvolume 重新挂载到对应的挂载点：
 
