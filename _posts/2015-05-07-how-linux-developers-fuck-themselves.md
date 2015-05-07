@@ -6,7 +6,7 @@ permalink: /2015/05/07/how-linux-developers-fuck-themselves.html
 categories: Linux
 tags: [kernel, Linux]
 ---
-在 Linux 的 4.1 版本内核中，开发人员又提交了一个无比蛋疼的修改：把所有 init_tss 符号都重命名为 cpu_tss 符号。肇事的就是[这次代码提交](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=24933b82c0d9a711475a5ef7904eb733f561e637)。
+在 Linux 的 4.1 版本内核中，开发人员又提交了一个无比蛋疼的修改：把所有 init\_tss 符号都重命名为 cpu\_tss 符号。肇事的就是[这次代码提交](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=24933b82c0d9a711475a5ef7904eb733f561e637)。
 
 然后事情不对劲了，nvidia、AMD、Broadcom 的闭源驱动通通中枪了，为什么？因为这个符号是 GPL 的，也就是说，如果要引用这个符号，那么闭源驱动都有被迫开源的风险。
 
