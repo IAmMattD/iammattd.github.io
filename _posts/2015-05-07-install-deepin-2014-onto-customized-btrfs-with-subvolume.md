@@ -18,6 +18,8 @@ tags: [btrfs, Deepin, subvolume]
 
 根据你自己的需要随意划分分区，建议将 `/boot` 单独分区。由于我们要采用 subvolume，因此只需要一个 btrfs 分区即可。另外，由于 btrfs 尚未支持 swap file，因此如果你的内存比较小，或者需要使用休眠功能，则必须再单独划分一个 swap 分区。
 
+<!-- more -->
+
 我自己的分区情况是：第一分区为一个 1MiB 大小的 BIOS 启动分区（因为我用的是 GPT，但是我的主板固件不支持 UEFI），第二分区为 512MiB 的 `/boot` 分区（ext2），第三分区为 swap 分区，第四分区为 btrfs 分区。
 
 把 btrfs 分区挂载到 `/mnt`，并指定挂载参数（我这里指定了 lzo 压缩、自动后台整理碎片以及空闲空间缓存加速。Ubuntu 的安装程序习惯把目标分区挂载到 `/target`）：
