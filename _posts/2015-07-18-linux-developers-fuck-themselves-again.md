@@ -2,7 +2,7 @@
 title: Linux 开发人员再次扯到了自己蛋
 author: MattD
 layout: post
-permalink: /2015/05/07/linux-developers-fuck-themselves-again.html
+permalink: /2015/07/18/linux-developers-fuck-themselves-again.html
 categories: Linux
 tags: [kernel, Linux]
 ---
