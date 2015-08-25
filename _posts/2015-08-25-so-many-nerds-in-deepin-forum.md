@@ -5,7 +5,7 @@ layout: post
 permalink: /2015/08/25/so-many-nerds-in-deepin-forum.html
 categories: Linux
 ---
-作为一个面向“小白”用户的发行版，Deepin 论坛的风气也算是在小白用户的洗礼下江河日下了。。
+作为一个面向“小白”用户的发行版，Deepin 论坛的风气也算是在小白用户的洗礼下江河日下了。
 
 然而，明明暑假都快过去了，论坛里的傻逼数量却在不断呈现增长趋势。
 
