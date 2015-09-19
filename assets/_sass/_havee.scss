@@ -84,7 +84,7 @@ time.small {
 
 .qrcode {
   margin: 0 0 10px 10px;
-  float: right
+  float: right;
 }
 
 .header {
@@ -112,9 +112,6 @@ time.small {
           color: darken($base05, 30%);
           background-color: transparent;
         }
-      }
-      form {
-        margin-top: 15px;
       }
     }
   }
@@ -146,6 +143,14 @@ time.small {
       background-color: rgba($base06, $alpha);
       border: 1px solid rgba($base08, $alpha * 2);
       box-shadow: 0 0 1px rgba($base08, $alpha);
+    }
+  }
+}
+
+aside {
+  section {
+    form {
+      margin-top: 25px;
     }
   }
 }
@@ -187,15 +192,14 @@ time.small {
     line-height: $line-height * 1.8;
     a {
       padding: 2px 4px;
-      border-radius: 4px;
       background-color: rgba(darken($base06, 30%), $alpha * 2);
+      box-shadow: 0 0px 4px rgba($base08, $alpha * 2);
     }
   }
 }
 
 .highlight pre {
-  max-width: 95%;
-  margin: 10px auto;
+  margin: 10px;
   background-color: rgba(darken($base05, 15%), $alpha);
   border-width: 1px 1px 1px 5px;
   border-style: solid;
@@ -209,8 +213,7 @@ time.small {
 
 blockquote {
   position: relative;
-  max-width: 95%;
-  margin: 15px auto;
+  margin: 15px 10px;
   background-color: rgba(lighten($base03, 10%), $alpha);
   border-width: 1px 1px 1px 5px;
   border-style: solid;
@@ -308,30 +311,10 @@ table {
 
 img {
   display: inherit;
-  max-width: 100%;
+  max-width: 85%;
   margin: 0 auto;
   line-height: $line-height*1.4;
-  border-radius: 6px;
   box-shadow: 0 0 1px $base07, 0 0 6px rgba($base08, $alpha * 3);
-}
-
-.img-wrap {
-  text-align:center;
-  margin:100px auto;
-  background:transparent;
-  .loading {
-    overflow: hidden;
-    position: relative;
-    display:inline-block;
-    text-align:left;
-    img {
-      border: 0;
-      line-height: $line-height;
-      border-radius: 0;
-      box-shadow: none;
-      transition: none;
-    }
-  }
 }
 
 .footer {
@@ -348,7 +331,17 @@ img {
   }
 }
 
-#search-loader {
-  display: none;
-  text-align: center;
+.tinysou-widget .autocomplete {
+  ul {
+    li {
+      p.title {
+        color: darken($base05, 15%);
+      }
+    }
+    li.active {
+      border-top: 1px solid $base03;
+      border-bottom: 1px solid $base03;
+      background: transparent linear-gradient(darken($base05, 15%), darken($base05, 30%)) repeat scroll 0% 0%;
+    }
+  }
 }

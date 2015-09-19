@@ -7,7 +7,7 @@ layout: default
   {% if post.content contains "<!-- more -->" %}
   {{ post.content | split:'<!-- more -->' | first }}
   {% else %}
-  {{ post.content | strip_html | truncatewords:50 }}
+  {{ post.content | strip_html | truncate:50 }}
   {% endif %}
 	<div>
 		<a href="{{ post.url }}" title="阅读全文" target="_blank" rel="nofollow">阅读全文</a>
@@ -39,6 +39,7 @@ layout: default
   </div>
 </div>
 <aside class="col-md-3 visible-lg visible-md">
+  {% include search.html %}
   {% include categories.html %}
   {% include recent_posts.html %}
   {% include recent_comments.html %}
