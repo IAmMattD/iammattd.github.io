@@ -1,7 +1,6 @@
 # Site settings
 title: "I Am MattD"
-url: "http://iammattd.github.io"
-highlighter: pygments
+url: "//iammattd.github.io"
 paginate: 5
 author:
     name: MattD
@@ -11,11 +10,11 @@ atom_path: /atom.xml
 rss_path: /rss.xml
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
-permalink: /:categories/:year/:month/:title.html
-
+kramdown:
+    input: GFM
+permalink: /:categories/:year-:month/:title.html
+gems: [jekyll-paginate]
+exclude: [Gemfile, Gemfile.lock, qrsync, Rakefile]
 assets_path: /assets
 sass:
     sass_dir: assets/_sass
@@ -24,7 +23,7 @@ sass:
 # comment
 comments:
     duoshuo:
-        name: mattd                              # short name
+        name: mattd
         rcomments:
             num: 10
             avatar: 0
@@ -42,4 +41,10 @@ search:
 analytics:
     baidu:
         siteid:                             # 百度统计 js 代码后的字符串
-
+webmaster:
+    baidu:
+        verify:
+    google:
+        verify:
+    bing:
+        verify:

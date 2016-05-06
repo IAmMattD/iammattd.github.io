@@ -3,15 +3,12 @@ layout: default
 ---
 <div class="col-md-9">
   {% for post in paginator.posts %}
-  <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a><time class="small">{{ post.date | date: "%Y.%m.%d" }}</time></h3>
   {% if post.content contains "<!-- more -->" %}
   {{ post.content | split:'<!-- more -->' | first }}
   {% else %}
   {{ post.content | strip_html | truncate:50 }}
   {% endif %}
-	<div>
-		<a href="{{ post.url }}" title="阅读全文" target="_blank" rel="nofollow">阅读全文</a>
-	</div>
   {% endfor %}
 
   <!-- Pagination links -->
@@ -25,21 +22,20 @@ layout: default
     <a class="btn btn-primary btn-sm" href="/page{{paginator.previous_page}}/">&laquo; 上一页</a>
     {% endif %}
     {% else %}
-    <span><a class="btn btn-primary btn-sm disabled" href="/">首页</a></span>
-    <span><a class="btn btn-primary btn-sm disabled">&laquo; 上一页</a></span>
+    <a class="btn btn-primary btn-sm disabled" href="/">首页</a>
+    <a class="btn btn-primary btn-sm disabled">&laquo; 上一页</a>
     {% endif %}
-    <span><a class="btn btn-primary btn-sm disabled">第 {{paginator.page}} 页，共 {{paginator.total_pages}} 页</a></span>
+    <a class="btn btn-primary btn-sm disabled">第 {{paginator.page}} 页，共 {{paginator.total_pages}} 页</a></span>
     {% if paginator.next_page %}
     <a class="btn btn-primary btn-sm" href="/page{{paginator.next_page}}/">下一页 &raquo;</a>
     <a class="btn btn-primary btn-sm" href="/page{{paginator.total_pages}}/">末页</a>
     {% else if paginator.page == paginator.total_pages %}
-    <span><a class="btn btn-primary btn-sm disabled">下一页 &raquo;</a></span>
-    <span><a class="btn btn-primary btn-sm disabled">末页</a></span>
+    <a class="btn btn-primary btn-sm disabled">下一页 &raquo;</a>
+    <a class="btn btn-primary btn-sm disabled">末页</a>
     {% endif %}
   </div>
 </div>
 <aside class="col-md-3 visible-lg visible-md">
-  {% include search.html %}
   {% include categories.html %}
   {% include recent_posts.html %}
   {% include recent_comments.html %}

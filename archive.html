@@ -1,5 +1,5 @@
 ---
-title: 文章归档
+title: Archive
 layout: page
 ---
 
@@ -11,7 +11,7 @@ layout: page
 
     {% if forloop.first %}
   <div class="timeline">
-      <h4 class="tl-year hidden-xs">{{ year }} 年</h4>
+      <h4 class="tl-year hidden-xs">Year {{ year }}</h4>
       <h5 class="tl-month hidden-xs">{{ month }}</h5>
       <ul class="tl-content">
     {% endif %}
@@ -23,7 +23,7 @@ layout: page
     {% else %}
         {% if year != nyear %}
           </ul>
-          <h4 class="tl-year hidden-xs">{{ nyear }} 年</h4>
+          <h4 class="tl-year hidden-xs">Year {{ nyear }}</h4>
           <h5 class="tl-month hidden-xs">{{ nmonth }}</h5>
           <ul class="tl-content">
         {% else %}
