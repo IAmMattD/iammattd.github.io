@@ -9,6 +9,9 @@ layout: default
   {% else %}
   {{ post.content | strip_html | truncate:50 }}
   {% endif %}
+  <div>
+    <a href="{{ post.url }}" title="阅读全文" target="_blank" rel="nofollow">阅读全文</a>
+  </div>
   {% endfor %}
 
   <!-- Pagination links -->
