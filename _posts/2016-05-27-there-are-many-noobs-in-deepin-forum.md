@@ -2,7 +2,7 @@
 title:深度论坛最近逗比很多 
 author: MattD
 layout: post
-#permalink: /2016/05/27/there-are-many-noobs-in-deepin-forum.html
+permalink: /2016/05/27/there-are-many-noobs-in-deepin-forum.html
 categories: 乱七八糟
 ---
 随着 Deepin 这个品牌知名度的提高，Deepin 论坛也不可避免地沦为了是非之地。
