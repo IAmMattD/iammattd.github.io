@@ -12,7 +12,7 @@ rss_path: /rss.xml
 # Build settings
 kramdown:
     input: GFM
-permalink: /:categories/:year/:month/:date/:title.html
+permalink: /:categories/:year-:month/:title.html
 gems: [jekyll-paginate]
 exclude: [Gemfile, Gemfile.lock, qrsync, Rakefile]
 assets_path: /assets
