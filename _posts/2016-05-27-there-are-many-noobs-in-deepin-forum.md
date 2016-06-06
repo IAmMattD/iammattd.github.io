@@ -1,5 +1,5 @@
 ---
-title:深度论坛最近逗比很多 
+title: 深度论坛最近逗比很多 
 author: MattD
 layout: post
 permalink: /2016/05/27/there-are-many-noobs-in-deepin-forum.html
