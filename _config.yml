@@ -1,6 +1,6 @@
 # Site settings
 title: "I Am MattD"
-url: "//iammattd.github.io"
+url: "/iammattd.github.io"
 paginate: 5
 author:
     name: MattD
@@ -12,7 +12,7 @@ rss_path: /rss.xml
 # Build settings
 kramdown:
     input: GFM
-# permalink: /:categories/:year/:month/:date/:title.html
+permalink: /:categories/:year/:month/:date/:title.html
 gems: [jekyll-paginate]
 exclude: [Gemfile, Gemfile.lock, qrsync, Rakefile]
 assets_path: /assets
