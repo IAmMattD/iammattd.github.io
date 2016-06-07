@@ -35,6 +35,7 @@ categories: 乱七八糟
 // @include        */thread*
 // @include        */redirect.php*
 // @include        */forum*
+// @include        *bbs.deepin.org*
 // ==/UserScript==
 var bl = new Array("zzz19760225","id2","id3");
 for (x in bl) {
