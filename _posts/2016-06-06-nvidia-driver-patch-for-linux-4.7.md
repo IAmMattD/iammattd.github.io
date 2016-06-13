@@ -20,8 +20,8 @@ Linux 内核于上周发布了 4.7 的第一个 rc 版，果不其然，闭源�
 首先是针对内核的一个 patch，用于重命名那个同名函数：
 
 {% highlight bash %}
---- include/linux/radix-tree.h.orig	2016-05-31 21:12:31.143579722 +0800
-+++ include/linux/radix-tree.h	2016-05-31 21:13:09.593732659 +0800
+--- a/include/linux/radix-tree.h	2016-05-31 21:12:31.143579722 +0800
++++ b/include/linux/radix-tree.h	2016-05-31 21:13:09.593732659 +0800
 @@ -124,7 +124,7 @@
  	(root)->rnode = NULL;						\
  } while (0)
@@ -31,8 +31,8 @@ Linux 内核于上周发布了 4.7 的第一个 rc 版，果不其然，闭源�
  {
  	return root->rnode == NULL;
  }
---- kernel/irq/irqdomain.c.orig	2016-05-31 21:14:30.456053855 +0800
-+++ kernel/irq/irqdomain.c	2016-05-31 21:15:01.909178644 +0800
+--- a/kernel/irq/irqdomain.c	2016-05-31 21:14:30.456053855 +0800
++++ b/kernel/irq/irqdomain.c	2016-05-31 21:15:01.909178644 +0800
 @@ -139,7 +139,7 @@
  {
  	mutex_lock(&irq_domain_mutex);
