@@ -9,9 +9,9 @@ tags: [kernel, nvidia]
 
 Linux 内核于本周发布了 4.8 的第一个 rc 版。
 
-除了 4.7 内核中 radix_tree 函数的问题，API 也有其他变化，所以导致 Nvidia 驱动又得改一下 patch 才能顺利编译安装。
+除了 4.7 内核中 `radix_tree` 函数的问题，API 也有其他变化，所以导致 Nvidia 驱动又得改一下 patch 才能顺利编译安装。
 
-内核的 patch 依然不变，需要把 radix_tree 函数重命名。
+内核的 patch 依然不变，需要把 `radix_tree` 函数重命名。
 
 <!-- more -->
 
@@ -117,4 +117,4 @@ Linux 内核于本周发布了 4.8 的第一个 rc 版。
  
 {% endhighlight %}
 
-radix_tree 函数的问题看来是无法指望内核上游去修复了，Nvidia 那边似乎也不积极，暂时先这么凑合着吧。
+`radix_tree` 函数的问题看来是无法指望内核上游去修复了，Nvidia 那边似乎也不积极，暂时先这么凑合着吧。
