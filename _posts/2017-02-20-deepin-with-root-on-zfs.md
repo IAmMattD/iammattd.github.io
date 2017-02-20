@@ -25,7 +25,7 @@ tags: [ZFS, Deepin]
 # modprobe zfs
 {% endhighlight %}
 
-然后开始按照需要创建分区和 zpool。为了以防万一，我将 `/boot` 单独分区，剩下的空间创建一个分区，并全部留给zpool。另外，建议使用磁盘 ID 而不是块设备名来创建 zpool。具体的参数作用可以自己查找手册了解。
+然后开始按照需要创建分区和 zpool。为了以防万一，我将 `/boot` 单独分区，剩下的空间创建一个分区，并全部留给 zpool。另外，建议使用磁盘 ID 而不是块设备名来创建 zpool。具体的参数作用可以自己查找手册了解。
 
 {% highlight bash %}
 # zpool create -f -o ashift=12 -o cachefile= -O normalization=formD -O compression=lz4 -m none -R /mnt rpool /dev/disk/by-id/scsi-SATA_disk1
@@ -120,7 +120,7 @@ USERNAME ALL=(ALL:ALL) ALL
 重点来了，Deepin 仓库里面的 zfs-dkms 有 bug，需要将以下内容写入 `/etc/dkms/spl.conf`。
 
 {% highlight bash %}
-POST_INSTALL=“scripts/dkms.postbuild -a ${arch} -k ${kernelver} -v ${PACKAGE_VERSION} -n ${PACKAGE_NAME} -t ${dkms_tree}"
+POST_INSTALL="scripts/dkms.postbuild -a ${arch} -k ${kernelver} -v ${PACKAGE_VERSION} -n ${PACKAGE_NAME} -t ${dkms_tree}"
 {% endhighlight %}
 
 除此之外，还要把以下内容写入 `/usr/share/initramfs-tools/conf.d/zfs`。
@@ -189,4 +189,4 @@ ff02::2 ip6-allrouters
 # dpkg-reconfigure locales
 {% endhighlight %}
 
-然后卸载 `/mnt` 下挂载的所有文件系统，并且从 `/dev/sda` 引导。然后可以进行其他相关配置，本次安装完成。
+然后卸载 `/mnt` 下挂载的所有文件系统，并且从 `/dev/sda` 引导。登录以后可以根据需要进行其他相关配置，本次安装完成。
