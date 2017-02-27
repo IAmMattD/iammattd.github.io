@@ -10,9 +10,17 @@ tags: [ZFS, Deepin]
 
 现把流程记录如下，以作备忘。
 
-首先需要进入 Live 环境（很简单，在 ISO 引导界面编辑一下菜单项，把 `livecd-installer` 内核参数改为 `livecd` 就行了），安装一些必要的工具：
+首先需要进入 Live 环境（很简单，在 ISO 引导界面编辑一下菜单项，把 `livecd-installer` 内核参数改为 `livecd` 就行了）。
 
 <!-- more -->
+
+在安装 ZFS 模块之前，首先需要进行 dkms 配置，否则 ZFS 模块因为缺少必要的头文件，会安装失败。需要将以下内容写入 `/etc/dkms/spl.conf`。
+
+{% highlight bash %}
+POST_INSTALL="scripts/dkms.postbuild -a ${arch} -k ${kernelver} -v ${PACKAGE_VERSION} -n ${PACKAGE_NAME} -t ${dkms_tree}"
+{% endhighlight %}
+
+安装一些必要的工具：
 
 {% highlight bash %}
 # apt update
@@ -117,7 +125,7 @@ UUID=ffd7019b-d772-4069-821e-4fc74c8b22a9   /boot   ext4  defaults,noatime  1 2
 USERNAME ALL=(ALL:ALL) ALL
 {% endhighlight %}
 
-重点来了，Deepin 仓库里面的 zfs-dkms 有 bug，需要将以下内容写入 `/etc/dkms/spl.conf`。
+和一开始一样，需要配置下 dkms 配置文件，将以下内容写入 `/etc/dkms/spl.conf`。
 
 {% highlight bash %}
 POST_INSTALL="scripts/dkms.postbuild -a ${arch} -k ${kernelver} -v ${PACKAGE_VERSION} -n ${PACKAGE_NAME} -t ${dkms_tree}"
