@@ -21,16 +21,7 @@ sass:
     style: :compressed
 
 # comment
-comments:
-    duoshuo:
-        name: mattd
-        rcomments:
-            num: 10
-            avatar: 0
-            time: 0
-            title: 0
-            admin: 0
-            length: 26
+
 
 # tinysou.com
 search:
